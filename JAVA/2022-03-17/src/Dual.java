@@ -5,7 +5,13 @@ public class Dual {
     }
 
     private StringBuilder sb = new StringBuilder();
-    void attack(String weapon) {
+
+//    StringBuffer sb = new StringBuffer();
+
+    /*synchronized*/ void attack(String weapon) {
+//        synchronized (this) {
+//            sb.append(weapon);
+//        }
         sb.append(weapon);
         // 싱크로 ㄴ ㅏ이즈드  하나 줄세워야 그제야 접근할 수 있음
         // 너 들어가
@@ -30,6 +36,7 @@ public class Dual {
     }
 
     static class Worrier implements Runnable {
+        private static Object lock = new Object();
         private String weapon;
         private Dual dual;
 
@@ -46,7 +53,10 @@ public class Dual {
         }
 
         public void attack() {
-            dual.attack(this.weapon);
+//            dual.attack(this.weapon);
+            synchronized (lock){
+                dual.attack(this.weapon);
+            }
         }
     }
 }

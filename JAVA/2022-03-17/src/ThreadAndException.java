@@ -11,6 +11,7 @@ public class ThreadAndException {
 class ExceptionalRunner implements Runnable {
     @Override
     public void run() {
+        System.out.println("hihihihi");
         throw new RuntimeException("Unknown Exception.");
     }
 }
