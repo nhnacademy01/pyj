@@ -1,0 +1,16 @@
+th {
+    background-color: green;
+    border: solid 1px;
+    color: white;
+
+}
+
+table {
+    border: solid 1px gray;
+    width: 100%;
+    text-align: center;
+}
+
+td {
+    border: solid 1px gray;
+}

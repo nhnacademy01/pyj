@@ -6,115 +6,10 @@
     <title>유진이의 이력서</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-
-        * {
-            box-sizing: border-box;
-            font-family: 'Jua', sans-serif;
-        }
-
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        /* 헤더 스타일*/
-        header {
-            background-color: #F6DFEB;
-            padding: 20px;
-            text-align: center;
-            font-size: 35px;
-            color: #A685E2;
-            text-shadow: 1px 1px gray;
-        }
-
-        /* 왼쪽 네비 박스  */
-        nav {
-            float: left;
-            width: 20%;
-            height: 100%;
-            padding: 10px;
-            background-color: none;
-        }
-
-        /* 네비 박스 자체 */
-        nav ul {
-            list-style-type: none;
-            background-color: none;
-            padding: 0;
-        }
-
-        nav ul li a:link {
-            color: #A685E2
-        }
-
-        nav ul li a:visited {
-            color: #6155A6
-        }
-
-        nav ul li a:hover {
-            color: white
-        }
-
-        .contact {
-            list-style-type: url("/free-icon-pikachu-188987.png");
-
-        }
-
-        article {
-            float: left;
-            padding: 20px;
-            width: 80%;
-            background-color: none;
-            height: 100%;
-        }
-
-        /* Clear floats after the columns */
-        section::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* footer */
-        footer {
-            background-color: #F6DFEB;
-            padding: 10px;
-            text-align: center;
-            color: #F6DFEB;
-        }
-
-        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-        @media (max-width: 600px) {
-
-            nav,
-            article {
-                width: 100%;
-                height: auto;
-            }
-        }
-
-        .head-introduce {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .header-navi-ul {
-            text-align: right;
-            font-weight: bold;
-            list-style-type: none;
-            display: flex;
-            flex-direction: row;
-        }
-    </style>
+    <link rel="stylesheet" href="pyj.css"/>
 </head>
 
 <body>
-
-
 
     <header>
         <div class="head-introduce">
@@ -128,15 +23,15 @@
     <section>
         <nav>
             <ul>
-                <li><a href="#">학력</a></li><br>
-                <li><a href="#">경력</a></li><br>
-                <li><a href="#">교육</a></li><br>
-                <li><a href="#">봉사활동</a></li><br>
-                <li><a href="#">수상경력</a></li><br>
-                <li><a href="#">자격증</a></li><br>
-                <li><a href="#">어학시험</a></li><br>
-                <li><a href="#">프로젝트</a></li><br>
-                <li><a href="#">Contact Me</a></li><br>
+                <li>학력</li><br>
+                <li>경력</li><br>
+                <li>교육</li><br>
+                <li>봉사활동</li><br>
+                <li>수상경력</li><br>
+                <li>자격증</li><br>
+                <li>어학시험</li><br>
+                <li>프로젝트</li><br>
+                <li>Contack Me</li><br>
             </ul>
         </nav>
 
@@ -144,9 +39,9 @@
         <article>
             <div class="school">
                 <ul>
-                    <li class="school">학력</li>
+                    <li class="part">학력</li>
                 </ul>
-                <table>
+                <table class="table">
                     <tr>
                         <th>학교명</th>
                         <th>전공</th>
@@ -159,37 +54,37 @@
                         <td>이과</td>
                         <td>2012년 3월</td>
                         <td>2015년 2월</td>
-                        <td>100점~!</td>
+                        <td>100점</td>
                     </tr>
                     <tr>
-                        <td>건국대학교</td>
-                        <td>식량자원과학과</td>
+                        <td>와플 대학교</td>
+                        <td>냠냠쩝쩝 학과</td>
                         <td>2018년 3월</td>
                         <td>2020년 8월</td>
-                        <td>100점 최고!</td>
+                        <td>100점</td>
                     </tr>
                 </table>
             </div>
             <div class="career">
                 <ul>
-                    <li class="career">경력</li>
+                    <li class="part">경력</li>
                 </ul>
-                <table>
+                <table class="table">
                     <tr>
                         <th>회사명</th>
                         <th>부서</th>
                         <th>직급</th>
                     </tr>
                     <tr>
-                        <td>다산네트웍솔루션즈</td>
-                        <td>VS팀</td>
-                        <td>천재만재 코더</td>
+                        <td>돈키호테</td>
+                        <td>엮은이</td>
+                        <td>김경식</td>
                     </tr>
                 </table>
             </div>
             <div class="education">
                 <ul>
-                    <li class="education">교육</li>
+                    <li class="part">교육</li>
                 </ul>
                 <table>
                     <tr>
@@ -200,13 +95,13 @@
                     <tr>
                         <td>NHN Academy</td>
                         <td>웹 서비스 개발 부트캠프</td>
-                        <td><a href="https://www.nhnacademy.com/">Go!</a></td>
+                        <td><a href="https://www.nhnacademy.com/">Go</a></td>
                     </tr>
                 </table>
             </div>
             <div class="volunteer">
                 <ul>
-                    <li class="volunteer">봉사활동</li>
+                    <li class="part">봉사활동</li>
                 </ul>
                 <table>
                     <tr>
@@ -228,7 +123,7 @@
             </div>
             <div class="awards">
                 <ul>
-                    <li class="awards">수상</li>
+                    <li class="part">수상</li>
                 </ul>
                 <table>
                     <tr>
@@ -237,15 +132,15 @@
                         <th>수여기관</th>
                     </tr>
                     <tr>
-                        <td>프로젝트 최우수상</td>
+                        <td>밥 잘먹기상</td>
                         <td>최우수상</td>
-                        <td>kosta</td>
+                        <td>박가네</td>
                     </tr>
                 </table>
             </div>
             <div class="certificate">
                 <ul>
-                    <li class="certificate">자격증</li>
+                    <li class="part">자격증</li>
                 </ul>
                 <table>
                     <tr>
@@ -268,7 +163,7 @@
             </div>
             <div class="language">
                 <ul>
-                    <li class="language">어학</li>
+                    <li class="part">어학</li>
                 </ul>
                 <table>
                     <tr>
@@ -283,7 +178,7 @@
             </div>
             <div class="project">
                 <ul>
-                    <li class="project">프로젝트</li>
+                    <li class="part">프로젝트</li>
                 </ul>
                 <table>
                     <tr>
@@ -292,21 +187,16 @@
                         <th>기술스택</th>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>웹 프로젝트</td>
+                        <td>백엔드</td>
+                        <td>Java</td>
                     </tr>
                 </table>
             </div>
 
             <div class="contact">
                 <ul>
-                    <li class="contact">Contact Me</li>
+                    <li class="part">Contact Me</li>
                 </ul>
                 <a href="mailto:yujin353@naver.com"><img src="KakaoTalk_20220322_160604805.png" height="100px"
                         width="100px"></a>

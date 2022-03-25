@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let serviceKey="9tCgfIMwqY9z9%2F5P3dO3F%2BM88YVNdYA3xzhMZBuHYn9UeBHvajp68NQXGJAlTDi33ZTOZLUsbKV0mFpTDSpjLg%3D%3D";
+
+var xhr = new XMLHttpRequest();
+var url = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson'; /*URL*/
+var queryParams = '?' + encodeURIComponent('serviceKey') + '='+serviceKey; /*Service Key*/
+queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /**/
+queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('10'); /**/
+queryParams += '&' + encodeURIComponent('startCreateDt') + '=' + encodeURIComponent('20200310'); /**/
+queryParams += '&' + encodeURIComponent('endCreateDt') + '=' + encodeURIComponent('20200315'); /**/
+xhr.open('GET', url + queryParams);
+
+let itemList = [];
+fetch(url + queryParams )
+
+    .then(response => response.text())
+    .then(data => new window.DOMParser().parseFromString(data, "text/xml"))
+    .then(data => data.getElementsByTagName("item"))
+    .then( function(items){
+            for(let i=0; i<items.length; i++){
+                let accDefRate = items[i].getElementsByTagName("accDefRate")[0].innerHTML;
+                let accExamCnt = items[i].getElementsByTagName("accExamCnt")[0].innerHTML;
+                let createDt = items[i].getElementsByTagName("createDt")[0].innerHTML;
+                let deathCnt = items[i].getElementsByTagName("deathCnt")[0].innerHTML;
+                let seq = items[i].getElementsByTagName("seq")[0].innerHTML;
+                let stateDt = items[i].getElementsByTagName("stateDt")[0].innerHTML;
+                let updateDt = items[i].getElementsByTagName("updateDt")[0].innerHTML;
+
+                let item = {
+                    accDefRate,
+                    accExamCnt,
+                    createDt,
+                    deathCnt,
+                    seq,
+                    stateDt,
+                    updateDt
+                }
+                itemList.push(item);
+            }
+            itemList =  itemList.reverse();
+        }
+    ).catch((error) => {console.log(error)} );
+
+    console.log( itemList);
+    </script>
+</body>
+</html>

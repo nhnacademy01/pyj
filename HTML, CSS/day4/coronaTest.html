@@ -7,125 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-
-    <style>
-        th {    
-            background-color: lightgreen;
-            border: solid 1px
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="coronaTest.css">
 </head>
 
 <body>
-    <script>
-        let serviceKey = "9tCgfIMwqY9z9%2F5P3dO3F%2BM88YVNdYA3xzhMZBuHYn9UeBHvajp68NQXGJAlTDi33ZTOZLUsbKV0mFpTDSpjLg%3D%3D";
-
-        var xhr = new XMLHttpRequest();
-        var url = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson'; /*URL*/
-        var queryParams = '?' + encodeURIComponent('serviceKey') + '=' + serviceKey; /*Service Key*/
-        queryParams += '&' + encodeURIComponent('pageNo') + '=' + encodeURIComponent('1'); /**/
-        queryParams += '&' + encodeURIComponent('numOfRows') + '=' + encodeURIComponent('10'); /**/
-        queryParams += '&' + encodeURIComponent('startCreateDt') + '=' + encodeURIComponent('20200310'); /**/
-        queryParams += '&' + encodeURIComponent('endCreateDt') + '=' + encodeURIComponent('20200315'); /**/
-        xhr.open('GET', url + queryParams);
-
-        let itemList = [];
-        fetch(url + queryParams)
-            .then(response => response.text())
-            .then(data => new window.DOMParser().parseFromString(data, "text/xml"))
-            .then(data => data.getElementsByTagName("item"))
-            .then(function (items) {
-                for (let i = 0; i < items.length; i++) {
-                    let accDefRate = items[i].getElementsByTagName("accDefRate")[0].innerHTML;
-                    let accExamCnt = items[i].getElementsByTagName("accExamCnt")[0].innerHTML;
-                    let createDt = items[i].getElementsByTagName("createDt")[0].innerHTML;
-                    let deathCnt = items[i].getElementsByTagName("deathCnt")[0].innerHTML;
-                    let seq = items[i].getElementsByTagName("seq")[0].innerHTML;
-                    let stateDt = items[i].getElementsByTagName("stateDt")[0].innerHTML;
-                    let updateDt = items[i].getElementsByTagName("updateDt")[0].innerHTML;
-
-                    let item = {
-                        accDefRate,
-                        accExamCnt,
-                        createDt,
-                        deathCnt,
-                        seq,
-                        stateDt,
-                        updateDt
-                    }
-                    itemList.push(item);
-
-                }
-                itemList = itemList.reverse();
-
-                let dateCountRaw = []
-                let dateCount = []
-                let deathCnt = []
-                let accDefRate = []
-                let update = []
-                for (let i = 0; i < 6; i++) {
-                    dateCountRaw.push(itemList[i].createDt)
-                    dateCount.push(itemList[i].createDt.slice(0,11))
-                    deathCnt.push(itemList[i].deathCnt)
-                    accDefRate.push(itemList[i].accDefRate*1000000)
-                    update.push(itemList[i].updateDt)
-                }
-
-                // 표 만들기 
-                function addRow(){
-                    console.log(123)
-                }
-
-                // 차트 js
-                var context = document
-                    .getElementById('myChart')
-                    .getContext('2d');
-                var myChart = new Chart(context, {
-                    type: 'line', // 차트의 형태
-                    data: { // 차트에 들어갈 데이터
-                        labels: dateCount,
-                        datasets: [
-                            { //데이터
-                                label: '확진자(누적)', //차트 제목
-                                fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-                                data: accDefRate,
-                                backgroundColor: 'rgba(255, 0, 0, 0.7)',
-                                borderColor: 'rgba(255,0,0, 0.7)',
-                                borderWidth: 1 //경계선 굵기
-                            },
-                            {
-                                label: '사망자(누적)',
-                                type: 'line',
-                                fill: false,
-                                data: deathCnt,
-                                backgroundColor: 'rgb(0, 0, 255, 0.7)',
-                                borderColor: 'rgb(0, 0, 255, 0.7)'
-                            }
-                        ]
-                    },
-                    options: {
-                        scales: {
-                            yAxes: [
-                                {
-                                    ticks: {
-                                        beginAtZero: true,
-                                        max: 10000000
-                                    }
-                                }
-                            ]
-                        }
-                    }
-                });
-
-            }
-
-            ).catch((error) => { console.log(error) });
-
-
-
-    </script>
-
+    <script type="text/javascript" src="coronaTest.js"></script>
     <div>
         <h1>코로나 19 현황</h1>
 
@@ -139,14 +25,6 @@
                 </tr>
             </thead>
             <tbody id="table-body">
-                <!-- 여기 표 추가해야해~ -->
-                <script>
-                    addRow();
-                </script>
-                <!-- <td class='tg-0lax'>1</td>
-                <td class='tg-0lax'>2</td>
-                <td class='tg-0lax'>3</td>
-                <td class='tg-0lax'>4</td> -->
 
             </tbody>
         </table>
