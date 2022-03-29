@@ -19,7 +19,7 @@ const promise = new Promise((resolve, reject) => {
             if (this.status == 200) {
                 let msg = this.responseXML.getElementsByTagName("resultMsg")[0].innerHTML;
                 if (msg == "NORMAL SERVICE.") {
-                    resolve(this.responseXML);
+                    resolve(this.responseXML); // 가장 중요한 부분. // 성공했을 때 
                 } else {
                     reject(new Error(msg));
                 }
@@ -47,7 +47,7 @@ promise.then((xmlDoc) => {
         let defCnt = items[i].getElementsByTagName("defCnt")[0].innerHTML;
         let incDec = items[i].getElementsByTagName("incDec")[0].innerHTML;
 
-        let item = {
+        let item = { // 이런식으로 하면 createDt(key) : createDt(value) 형태로 알아서 오브젝트 생성
             createDt, // 등록 날짜
             gubun, // 시도명
             defCnt, // 확진자수
