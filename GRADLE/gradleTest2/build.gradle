@@ -1,0 +1,18 @@
+//apply plugin: 'java'
+// 구버전
+
+plugins {
+    id 'java'
+}
+// 신버전
+
+task sum {
+    def hi = 1
+    def random = new Random().nextInt(10) + 1
+    def sum = 0
+    for(int i=1; i<= random; i++){
+        sum += i
+    }
+
+    println sum
+}

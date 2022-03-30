@@ -1,0 +1,8 @@
+task showRepositories{
+    println "repositories:" + repositories.collect { it.name }
+}
+
+task showProperties {
+    println "customProperty:" + customProperty
+    println "custom.property:" + project.property('custom.property')
+}
