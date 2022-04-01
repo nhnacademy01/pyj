@@ -8,8 +8,12 @@ public class DeepCopy {
 
         amount.value = 20_000;
 
+        System.out.println("진짜 객체");
         System.out.println(account);
+        System.out.println(account.hashCode()+" + "+ account.getAmount().hashCode());
+        System.out.println("복사 객체");
         System.out.println(replica);
+        System.out.println(replica.hashCode()+" + "+ replica.getAmount().hashCode());
     }
 }
 class DcAccount implements Cloneable {
@@ -21,6 +25,11 @@ class DcAccount implements Cloneable {
         this.amount = amount;
         this.depositor = depositor;
     }
+
+    public DcMoney getAmount() {
+        return amount;
+    }
+
     @Override
     protected DcAccount clone() throws CloneNotSupportedException {
         DcAccount clone = (DcAccount) super.clone();

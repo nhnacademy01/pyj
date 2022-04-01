@@ -1,0 +1,7 @@
+
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+>
+child1/pom.xml,2\f\2f875da4442f9198084447576a15c5454f025d85
+>
+child2/pom.xml,7\2\7235bb67be6eb1937768faf7f8350262ae7b13bf

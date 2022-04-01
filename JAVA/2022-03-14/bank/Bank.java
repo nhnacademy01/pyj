@@ -20,7 +20,6 @@ class Bank {
             if (initMoney.getCurrency() == Money.Currency.YEN) {
                 throw new initMoneyException("엔화는 계좌 개설이 불가능합니다.");
             }
-
         } catch (initMoneyException cause) {
             return null;
         }

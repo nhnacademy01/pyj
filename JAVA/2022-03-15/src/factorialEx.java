@@ -5,26 +5,39 @@ import java.text.DecimalFormat;
 public class factorialEx {
     public static void main(String[] args) {
         BigInteger big = new BigInteger("0");
-//        Factorial(30);
+        System.out.println(Factorial(3));
+        System.out.println(Factorial2(3));
+        System.out.println(Factorial3(3));
+
+//        facto(new BigInteger("30"));
 
 //        BigInteger result = facto(BigInteger.valueOf(30));
 
 //        BigDecimalEx();
 
-        DecimalFormat();
+//        DecimalFormat();
     }
 
-//    static BigInteger Factorial(int num){
-//        int count = 0;
-//        while(count < num){
-//            if(num == 0){
-//                return big("1");
-//            }
-//            Factorial(count);
-//            count += 1;
-//        }
-//        return big;
-//    }
+    static int Factorial(int num) {
+        if (num == 0) {
+            return 1;
+        }
+        return Factorial(num-1) * num;
+    }
+
+    static int Factorial2(int num){
+        while(num == 0){
+            return 1;
+        }return Factorial2(num-1) * num;
+    }
+
+    static int Factorial3(int num){
+        // 1 * 2 * 3 ..
+        for (int i = num; i > 0; i++) {
+            return Factorial3(num-1) * num;
+        }
+        return 1;
+    }
 
     static BigInteger facto(BigInteger value) {
         if (value.equals(BigInteger.ZERO)) {

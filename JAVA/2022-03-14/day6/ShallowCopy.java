@@ -8,8 +8,13 @@ public class ShallowCopy {
         // deep copy 하고싶은데 어떻게 해야할까?
         amount.value = 20_000;
 
+        System.out.println("진짜 객체");
         System.out.println(account);
+        System.out.println(account.hashCode()+" + "+ account.getAmount().hashCode());
+        System.out.println("복사 객체");
         System.out.println(replica);
+        System.out.println(replica.hashCode()+" + "+ replica.getAmount().hashCode());
+
     }
 }
 class ScAccount implements Cloneable {
@@ -21,6 +26,11 @@ class ScAccount implements Cloneable {
         this.amount = amount;
         this.depositor = depositor;
     }
+
+    public ScMoney getAmount() {
+        return amount;
+    }
+
     @Override
     protected ScAccount clone() throws CloneNotSupportedException {
         return (ScAccount) super.clone();
