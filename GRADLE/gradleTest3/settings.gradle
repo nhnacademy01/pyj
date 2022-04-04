@@ -1,2 +1,0 @@
-rootProject.name = 'gradleTest3'
-println 'hello settings.gradle'
