@@ -1,0 +1,22 @@
+.calendar {
+border: 1px solid;
+width: 70%;
+}
+
+.text-button {
+margin-right: 5px;
+}
+
+.submit-button {
+margin-left: 5px;
+margin-right: 3px;
+}
+
+.day {
+border-right: 5px solid green;
+width: 10%;
+}
+
+*#text {
+background: linear-gradient(to top, #FFE400 50%, transparent 50%)
+}

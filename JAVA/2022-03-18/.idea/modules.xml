@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/2022-03-18.iml" filepath="$PROJECT_DIR$/2022-03-18.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../../shattered-pixel-dungeon/shattered-pixel-dungeon.iml" filepath="$PROJECT_DIR$/../../../../shattered-pixel-dungeon/shattered-pixel-dungeon.iml" />
+    </modules>
+  </component>
+</project>

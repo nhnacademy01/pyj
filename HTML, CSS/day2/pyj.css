@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+* {
+box-sizing: border-box;
+font-family: 'Jua', sans-serif;
+}
+
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 헤더 스타일*/
+header {
+background-color: #F6DFEB;
+padding: 20px;
+text-align: center;
+font-size: 35px;
+color: #A685E2;
+text-shadow: 1px 1px gray;
+}
+
+/* 왼쪽 네비 박스  */
+nav {
+float: left;
+width: 20%;
+height: 100%;
+padding: 10px;
+background-color: none;
+}
+
+/* 네비 박스 자체 */
+nav ul {
+list-style-type: none;
+background-color: none;
+padding: 0;
+}
+
+nav ul li {
+color: #A685E2
+}
+
+.contact {
+list-style-type: url("/free-icon-pikachu-188987.png");
+
+}
+
+article {
+float: left;
+padding: 20px;
+width: 80%;
+background-color: none;
+height: 100%;
+}
+
+/* Clear floats after the columns */
+section::after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* footer */
+footer {
+background-color: #F6DFEB;
+padding: 10px;
+text-align: center;
+color: #F6DFEB;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+nav,
+article {
+    width: 100%;
+    height: auto;
+}
+}
+
+.head-introduce {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+
+.header-navi-ul {
+text-align: right;
+font-weight: bold;
+list-style-type: none;
+display: flex;
+flex-direction: row;
+}
+
+.part {
+list-style-type: "🌺 ";
+font-size: x-large
+}
+
+.table {
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+table tr th {
+font-size: medium;
+padding-left: 20px;
+text-align: left;
+color: #1C0A00;
+font-weight: 200;
+border-bottom: 1px solid #CDD0CB;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+table tr td {
+font-size: medium;
+padding-left: 20px;
+text-align: left;
+padding-top: 5px;
+padding-bottom: 5px;
+}

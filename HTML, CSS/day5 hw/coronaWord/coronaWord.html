@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="COVID-Icons-17.png" rel="shortcut icon" type="imge/x-icon">
+    <title>코로나 국가 현황</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="coronaWord.css">
+    <script type="text/javascript" src="coronaWord.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['geochart'],
+        });
+        google.charts.setOnLoadCallback(drawRegionsMap);
+
+        function drawRegionsMap() {
+            // alert(googleMap.length)
+            console.log(googleMap.length)
+            console.log(googleMap)
+            console.log(itemList.length)
+            console.log(itemList[0])
+            var data = google.visualization.arrayToDataTable([
+                ['Country', 'Popularity'],
+                ['South Korea', 14294],
+                ['China', 4638],
+                ['Hong Kong', 6569],
+                ['Taiwan', 853],
+                ['Macau', 0],
+                ['Japan', 27356],
+                ['Singapore', 1220],
+                ['Thailand', 24579],
+                ['Malaysia', 34600],
+                ['Vietnam', 42075],
+                ['India', 516672],
+                ['Philippines', 58563],
+                ['Cambodia', 3052],
+                ['Nepal', 11951],
+                ['Sri Lanka', 16450],
+                ['Afghanistan', 7657],
+                ['Pakistan', 30333],
+                ['Indonesia', 154343],
+                ['Bhutan', 9],
+                ['Maldives', 297],
+                ['Bangladesh', 29118],
+                ['Brunei', 145],
+                ['Mongolia', 2108],
+                ['Kazakhstan', 19006],
+                ['Uzbekistan', 1637],
+                ['Kyrgyzstan', 2982],
+                ['East Timor', 130],
+                ['Myanmar', 19428]
+        ]);
+                
+
+            var options = {};
+
+            var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h2>코로나 현황</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li>코로나 국가발생 현황</li>
+            </ul>
+        </nav>
+
+        <article>
+            <table id="corona-country-table">
+                <tr id="corona-country-table-th">
+                    <th>국가</th>
+                    <th>누적확진자</th>
+                    <th>신규확진자</th>
+                    <th>사망률(수)</th>
+                </tr>
+                <tr id="corona-country-table-td">
+                </tr>
+            </table>
+
+            <div class="paging">
+                <p>
+                    <a href="#" id="PgnoCurr" onclick="before()"><span>◀</span></a>
+                    <a href="#" id="PgnoTot" onclick="next()">▶</a>
+                </p>
+            </div>
+        </article>
+
+    </section>
+    <div id="regions_div" style="width: 500px; height: 500px;"></div>
+    <footer>
+        <p>MADE BY PYJ</p>
+    </footer>
+
+</body>
+
+</html>
