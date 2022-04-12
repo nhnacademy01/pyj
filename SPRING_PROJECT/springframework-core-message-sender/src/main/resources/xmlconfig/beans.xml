@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- annotation설정을 위해 추가-->
+    <context:annotation-config />
+
+    <!--    <bean id="koreanGreeter" class="com.nhnacademy.edu.springframework.messagesender.KoreanGreeter"></bean>-->
+
+<!--    <bean id="smsMessageSender" class="com.nhnacademy.edu.springframework.messagesender.SmsMessageSender" >-->
+<!--        <qualifier type="com.nhnacademy.edu.springframework.messagesender.annotation.SMS" />-->
+<!--    </bean>-->
+
+<!--    <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.messagesender.EmailMessageSender" />-->
+
+    <!--    <bean id="messageSenderService" class="com.nhnacademy.edu.springframework.messagesender.MessageSenderService" >-->
+<!--        <constructor-arg ref="emailMessageSender"></constructor-arg>-->
+<!--        &lt;!&ndash; <constructor-arg value> 는 string 값을 넣는 것 &ndash;&gt;-->
+<!--    </bean>-->
+
+<!--    <bean id="messageSenderService" class="com.nhnacademy.edu.springframework.messagesender.MessageSenderService">-->
+<!--        <property name="messageSender" ref="smsMessageSender"></property>-->
+<!--        &lt;!&ndash; property의 name은 setter 메소드 이름을 보고 간 것이다 &ndash;&gt;-->
+<!--    </bean>-->
+<!-- 생성자와 setter를 같이 쓸 수는 있지만 한 클래스 내에서는 그렇게 사용하지 않는다 -->
+
+    <!-- byName -->
+<!--    <bean id="messageSenderService" class="com.nhnacademy.edu.springframework.messagesender.MessageSenderService" autowire="byName">-->
+<!--    </bean>-->
+
+<!--    <bean id="messageSenderService" class="com.nhnacademy.edu.springframework.messagesender.MessageSenderService" autowire="byName">-->
+<!--    </bean>-->
+
+    <!-- annotation 만들기 -->
+<!--    <bean id="messageSenderService" class="com.nhnacademy.edu.springframework.messagesender.MessageSenderService">-->
+<!--        <constructor-arg ref="smsMessageSender"></constructor-arg>-->
+<!--    </bean>-->
+
+<!--    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.messagesender.MessageSenderService">-->
+<!--    </bean>-->
+
+</beans>

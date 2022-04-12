@@ -14,7 +14,8 @@ public class Main {
 //        EmailMessageSender emailMessageSender = new EmailMessageSender();
 //        emailMessageSender.sendMessage(user, "바이");
 
-        try(ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml")){
+        try(ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+            "xmlconfig/beans.xml")){
 //            MessageSender smsMessageSender1 = context.getBean("smsMessageSender", MessageSender.class);
 //            MessageSender smsMessageSender2 = context.getBean("smsMessageSender", MessageSender.class);
 //            context.getBean("smsMessageSender", MessageSender.class).sendMessage(user, "오 구현체 없이도 만들수도 있군요?");
