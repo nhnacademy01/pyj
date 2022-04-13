@@ -16,5 +16,15 @@
       <option name="name" value="JBoss Community repository" />
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="release" />
+      <option name="name" value="release" />
+      <option name="url" value="https://github.com/edu-springboot/edu-springboot-maven-repo/raw/master/releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="snapshot" />
+      <option name="name" value="snapshot" />
+      <option name="url" value="https://github.com/edu-springboot/edu-springboot-maven-repo/raw/master/snapshots" />
+    </remote-repository>
   </component>
 </project>

@@ -1,0 +1,43 @@
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>myApp.log</file>
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.nhnacademy.edu.springframework" level="INFO" additivity="false">
+        <!--
+        logger는 부모 자식 관계를 가지는데 root는 모든 logger의 부모이다.
+         로거가 어떤 일을 하고나면 stdout에 추가하는데
+         그 이후에도 부모한테 어떤 일을 하라고 stdout에 전달해준다
+         그래서 additivity=false를 넣지 않으면 (true는 상위 폴더로 넘기는 것)
+         stdout을 2번 하게 되어서 log가 2줄 출력된다
+         -->
+
+        <appender-ref ref="STDOUT"></appender-ref>
+    </logger>
+
+    <!--    <logger name="chapters.configuration.Foo" level="DEBUG"/>-->
+
+    <logger name="com.nhnacademy.edu.springframework.JavaConfigMain" level="DEBUG" additivity="false">
+        <appender-ref ref="FILE"></appender-ref>
+    </logger>
+
+    <!-- turn OFF all logging (children can override) -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>

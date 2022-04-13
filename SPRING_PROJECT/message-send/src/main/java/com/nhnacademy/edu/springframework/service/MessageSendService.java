@@ -1,19 +1,25 @@
 package com.nhnacademy.edu.springframework.service;
 
 import com.nhnacademy.edu.springframework.User;
+import com.nhnacademy.edu.springframework.annotation.Dooray;
 import com.nhnacademy.edu.springframework.annotation.Sms;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 
 public class MessageSendService {
+
     private MessageSender messageSender;
 
-//    @Autowired
 //    public void setMessageSender(@Sms MessageSender messageSender) {
 //        this.messageSender = messageSender;
 //    }
 
-    //@Autowired
-    public MessageSendService(MessageSender messageSender) {
+    //    public MessageSendService(){
+//
+//    }
+//
+    @Autowired
+    public MessageSendService(@Dooray MessageSender messageSender) {
         this.messageSender = messageSender;
     }
 

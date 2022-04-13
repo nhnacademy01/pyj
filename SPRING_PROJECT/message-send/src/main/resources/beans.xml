@@ -9,26 +9,32 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- annotation설정을 위해 추가-->
-    <context:annotation-config />
+    <context:annotation-config/>
 
-<!--    <bean id="smsMessageSender"-->
-<!--          class="com.nhnacademy.edu.springframework.service.SmsMessageSender"-->
-<!--          scope="prototype"-->
-<!--          init-method="init"-->
-<!--    >-->
-<!--        <qualifier type="com.nhnacademy.edu.springframework.annotation.Sms" />-->
-<!--    </bean>-->
+    <!--    <bean id="smsMessageSender"-->
+    <!--          class="com.nhnacademy.edu.springframework.service.SmsMessageSender"-->
+    <!--          scope="prototype"-->
+    <!--          init-method="init"-->
+    <!--    >-->
+    <!--        <qualifier type="com.nhnacademy.edu.springframework.annotation.Sms" />-->
+    <!--    </bean>-->
 
-<!--    <bean id="emailMessageSender"-->
-<!--          class="com.nhnacademy.edu.springframework.service.EmailMessageSender"-->
-<!--          scope="singleton"-->
-<!--          destroy-method="destroy"-->
-<!--    >-->
-<!--        <qualifier type="com.nhnacademy.edu.springframework.annotation.Email" />-->
-<!--    </bean>-->
+    <bean id="doorayMessageSender" class="com.nhnacademy.edu.springframework.service.DoorayMessageSender">
+        <qualifier type="com.nhnacademy.edu.springframework.annotation.Dooray"/>
+    </bean>
 
-<!--    <bean id="messageSendService"-->
-<!--          class="com.nhnacademy.edu.springframework.service.MessageSendService"-->
-<!--    />-->
+    <!--    <bean id="emailMessageSender"-->
+    <!--          class="com.nhnacademy.edu.springframework.service.EmailMessageSender"-->
+    <!--          scope="singleton"-->
+    <!--          destroy-method="destroy"-->
+    <!--    >-->
+    <!--        <qualifier type="com.nhnacademy.edu.springframework.annotation.Email" />-->
+    <!--    </bean>-->
+
+    <!--    <bean id="messageSendService"-->
+    <!--          class="com.nhnacademy.edu.springframework.service.MessageSendService"-->
+    <!--    />-->
+
+    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.service.MessageSendService"></bean>
 
 </beans>
