@@ -1,0 +1,32 @@
+
+~
+java:S1128"\Remove this unused import 'com.nhnacademy.edu.springframework.project.repository.CsvScores'.(ωΣΝώώÿÿÿÿ8ΐΓι±‚0
+{
+java:S1128"^Remove this unused import 'com.nhnacademy.edu.springframework.project.repository.CsvStudents'.(Ωƒ΅8ΞΓι±‚0
+u
+java:S1128"XRemove this unused import 'com.nhnacademy.edu.springframework.project.repository.Score'.(βω•Ό8ΰΓι±‚0
+v
+java:S1128"YRemove this unused import 'com.nhnacademy.edu.springframework.project.repository.Scores'.(„Ξ®π8πΓι±‚0
+}
+java:S1128"[Remove this unused import 'com.nhnacademy.edu.springframework.project.repository.Students'.(€ξ ‰όÿÿÿÿ8ÿΓι±‚0
+
+java:S1128"bRemove this unused import 'com.nhnacademy.edu.springframework.project.service.CsvDataLoadService'.(ƒ·ε8€Δι±‚0
+|
+java:S1128	"_Remove this unused import 'com.nhnacademy.edu.springframework.project.service.DataLoadService'.(ύςχ8€Δι±‚0
+‡
+java:S1128
+"eRemove this unused import 'com.nhnacademy.edu.springframework.project.service.DefaultStudentService'.(±΄φΧϊÿÿÿÿ8€Δι±‚0
+{
+java:S1128"^Remove this unused import 'com.nhnacademy.edu.springframework.project.service.StudentService'.(ξ£δΤ8€Δι±‚0
+u
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(΅ΈΞωÿÿÿÿ8‚Δι±‚0
+e
+java:S1128"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚ξ‰ή8ƒΔι±‚0
+q
+java:S1128"ORemove this unused import 'org.springframework.context.annotation.Conditional'.(Ση»®ϊÿÿÿÿ8ƒΔι±‚0
+t
+java:S1128"RRemove this unused import 'org.springframework.context.annotation.ImportResource'.(ϋκΝ‚ÿÿÿÿÿ8ειλ±‚0
+k
+java:S1128"IRemove this unused import 'org.springframework.context.annotation.Scope'.(ώθ®€ÿÿÿÿÿ8„Δι±‚0
+_
+java:S1128"=Remove this unused import 'org.springframework.lang.NonNull'.(―†—ÿÿÿÿÿ8’Δι±‚0

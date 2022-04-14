@@ -1,0 +1,9 @@
+
+e
+java:S1128"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Ş8ãğŒ¯‚0
+g
+java:S1128"ERemove this unused import 'org.springframework.stereotype.Component'.(Ş÷Ñ¸ÿÿÿÿÿ8òğŒ¯‚0
+h
+java:S1128"FRemove this unused import 'org.springframework.stereotype.Repository'.(¦ıÍıüÿÿÿÿ8º°Ì¯‚0
+1
+java:S1700	"Rename field "score"(èÅûÍ8‚ñŒ¯‚0

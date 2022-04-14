@@ -1,0 +1,37 @@
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/performance.log</file>
+        <encoder>
+            <pattern>
+                %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.nhnacademy.edu.springframework" level="DEBUG" additivity="false">
+        <appender-ref ref="STDOUT"></appender-ref>
+        <appender-ref ref="FILE"></appender-ref>
+    </logger>
+
+    <logger name="com.nhnacademy.edu.springframework.project.Main" level="DEBUG" additivity="false">
+        <appender-ref ref="STDOUT"></appender-ref>
+        <appender-ref ref="FILE"></appender-ref>
+
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"></appender-ref>
+
+    </root>
+
+</configuration>

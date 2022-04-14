@@ -1,0 +1,6 @@
+projectKey=com.nhnacademy.edu.springframework.project:springframework-project1
+serverUrl=http://133.186.211.156:9000
+serverVersion=8.9.1.44547
+dashboardUrl=http://133.186.211.156:9000/dashboard?id=com.nhnacademy.edu.springframework.project%3Aspringframework-project1
+ceTaskId=AYAmhiJMmo2e7XlumjK0
+ceTaskUrl=http://133.186.211.156:9000/api/ce/task?id=AYAmhiJMmo2e7XlumjK0
