@@ -1,5 +1,5 @@
 
-N
-java:S58387"1Use assertThat(actual).hasSize(expected) instead.(«ÂÏ—8×Û¨³‚0
 J
 java:S2699*"-Add at least one assertion to this test case.(¼®Ç¼8±¬Ò³‚0
+N
+java:S58387"1Use assertThat(actual).hasSize(expected) instead.(«ÂÏ—8×Û¨³‚0
