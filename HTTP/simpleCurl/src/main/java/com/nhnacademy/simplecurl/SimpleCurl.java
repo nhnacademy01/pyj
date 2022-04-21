@@ -50,6 +50,8 @@ public class SimpleCurl {
                 }
             } else if (args[0].equals("-L")) {
                 writeCliLocation(out, parseUrl, args);
+            } else if (args[0].equals("-F")) {
+                writeCliFile(out, parseUrl);
             } else {
                 writeCli(out, parseUrl);
             }
@@ -58,18 +60,19 @@ public class SimpleCurl {
             String str;
             boolean isChecked = false;
 
-            // todo byte
-            //             byte[] data = new byte[16];
-            //            int n = is.read(data);
-            //            final String resultFromServer = new String(data,0,n);
             while ((str = reader.readLine()) != null) {
+                byte[] data = new byte[str.length()];
+                for (int i = 0; i < data.length; i++) {
+                    data[i] = (byte) str.charAt(i);
+                }
+
                 // Ex 1
                 if (args.length == 1) {
                     if (str.equals("")) {
                         isChecked = true;
                     }
                     if (isChecked) {
-                        System.out.println(str);
+                        in.readFully(data);
                     }
                 }
 
@@ -78,23 +81,21 @@ public class SimpleCurl {
                         isChecked = true;
                     }
                     if (isChecked) {
-                        System.out.println(str);
+                        in.readFully(data);
                     }
                 }
 
                 if (args[0].equals("-v")) {// Ex 3
                     if (args[1].equals("-H")) {// Ex 4
-                        System.out.println(str);
+                        in.readFully(data);
 
                     }
                     if (args[1].equals("-X") && args[2].equals("POST")) {// Ex 5
-                        System.out.println(str);
+                        in.readFully(data);
                     }
                 }
 
-                // Ex 6
-                // curl -L http://httpbin.org/status/302
-                if (args[0].equals("-L")) {
+                if (args[0].equals("-L")) { // Ex 6
                     int count = 0;
                     while (count < 5) {
                         if (str.contains("location:")) {
@@ -102,16 +103,14 @@ public class SimpleCurl {
                                 str.split("location:")[1].split("Access-Control-Allow-Origin")[0];
                             count = writeCliLocationCount(out, parseUrl, location, count);
                         } else {
-                            System.out.println(str);
+                            in.readFully(data);
                             break;
                         }
                     }
                 }
 
-                // Ex 7
-                // curl -F "upload=@file_path" http://httpbin.org/post
-                if (args[0].equals("-F")) {
-
+                if (args[0].equals("-F")) { // Ex 7
+                    in.readFully(data);
                 }
 
             }
@@ -169,6 +168,19 @@ public class SimpleCurl {
         out.flush();
         count += 1;
         return count;
+    }
+
+    public static void writeCliFile(PrintStream out, ParseUrl parseUrl) {
+        out.println("POST /post HTTP/1.1");
+        out.println("Host: " + parseUrl.getHost());
+        out.println("User-Agent: curl/7.68.0");
+        out.println("Accept: */*");
+        out.println("Content-Length: 9999");
+        out.println("\n");
+        out.println("Content-Disposition: form-data; name=files; filename=test1.txt[\r][\n]");
+        out.println("Content-type=multipart/formdata; boundary=----myboundary");
+        out.println("\n");
+        out.flush();
     }
 
     public static List<String> parseJson(String json) {
