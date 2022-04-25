@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    
+    
+    <servlet>
+        <servlet-name>helloServlet</servlet-name>
+        <servlet-class>com.nhnacademy.servlet.HelloServlet</servlet-class>
+        <init-param>
+            <param-name>title</param-name>
+            <param-value>Mr.</param-value>
+        </init-param>
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>dongmyo</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup> <!-- servlet container가 뜰 때 init() 메소드가 호출될 수 있게 (1) -->
+    </servlet>
+    
+    <servlet>
+        <servlet-name>nowServlet</servlet-name>
+        <servlet-class>com.nhnacademy.servlet.NowServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>htmlServlet</servlet-name>
+        <servlet-class>com.nhnacademy.servlet.HtmlServlet</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>parameterHtmlServlet</servlet-name>
+        <servlet-class>com.nhnacademy.servlet.ParametersHtmlServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>requestServlet</servlet-name>
+        <url-pattern>/req</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>counterServlet</servlet-name>
+        <servlet-class>com.nhnacademy.servlet.CounterServlet</servlet-class>
+        <init-param>
+            <param-name>count</param-name>
+            <param-value>1</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>requestServlet</servlet-name>
+        <servlet-class>com.nhnacademy.servlet.RequestServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>counterServlet</servlet-name>
+        <url-pattern>/counter</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>helloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>nowServlet</servlet-name>
+        <url-pattern>/now</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>htmlServlet</servlet-name>
+        <url-pattern>/form</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>parameterHtmlServlet</servlet-name>
+        <url-pattern>/multi</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>https://nhnacademy.com/</param-value>
+    </context-param>
+
+</web-app>
