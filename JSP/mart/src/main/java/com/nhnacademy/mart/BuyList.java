@@ -11,6 +11,13 @@ public class BuyList extends FoodStand {
         foodStand.remove(item.getName(), item.getAmount());
     }
 
+    @Override
+    public String toString() {
+        return "BuyList{" +
+            "items=" + items +
+            '}';
+    }
+
     public ArrayList<Item> getItems() {
         return items;
     }
@@ -30,6 +37,14 @@ public class BuyList extends FoodStand {
 
         public int getAmount() {
             return amount;
+        }
+
+        @Override
+        public String toString() {
+            return "Item{" +
+                "name='" + name + '\'' +
+                ", amount=" + amount +
+                '}';
         }
     }
 

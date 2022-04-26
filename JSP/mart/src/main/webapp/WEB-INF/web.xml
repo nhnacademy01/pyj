@@ -3,10 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    
+
+
     <context-param>
         <param-name>onion</param-name>
         <param-value>1000</param-value>
+        <!-- 이런 방법도 있다 -->
+        <!-- <param-value>2;1000</param-value> -->
     </context-param>
     <context-param>
         <param-name>egg</param-name>
@@ -59,13 +62,11 @@
     
     <error-page>
         <error-code>500</error-code>
-        <location>/error500..html</location>
+        <location>/error500.html</location>
     </error-page>
 
     <error-page>
         <error-code>404</error-code>
-        <location>/error500..html</location>
+        <location>/error500.html</location>
     </error-page>
-
-
 </web-app>

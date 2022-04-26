@@ -1,0 +1,16 @@
+
+‹
+java:S1319"pThe type of "possibleBuyItems" should be an interface such as "List" rather than the implementation "ArrayList".(…¼Ïµüÿÿÿÿ
+R
+java:S4973<"<Strings and Boxed types should be compared using "equals()".(ò§ƒ¶
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÿñå
+N	java:S106""9Replace this use of System.out or System.err by a logger.(¥’Óç
+N	java:S106$"9Replace this use of System.out or System.err by a logger.(ÛÅÛò
+N	java:S106'"9Replace this use of System.out or System.err by a logger.(îŽø×
+S	java:S106*"9Replace this use of System.out or System.err by a logger.(Ôè›·þÿÿÿÿ
+S	java:S106,"9Replace this use of System.out or System.err by a logger.(ßÏˆ†þÿÿÿÿ
+S	java:S106-"9Replace this use of System.out or System.err by a logger.(ß½ùÿÿÿÿ
+N	java:S106:"9Replace this use of System.out or System.err by a logger.(“ë—¤
+S	java:S106="9Replace this use of System.out or System.err by a logger.(·óˆ«ýÿÿÿÿ
+S	java:S106@"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ

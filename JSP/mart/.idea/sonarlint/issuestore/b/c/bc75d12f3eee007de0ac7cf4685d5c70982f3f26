@@ -1,0 +1,5 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(×³ª¨
+N	java:S1067"9Replace this use of System.out or System.err by a logger.(Ç€Ï°
+D
+java:S1068")Remove this unused "foods" private field.(‹Þ‚†ýÿÿÿÿ

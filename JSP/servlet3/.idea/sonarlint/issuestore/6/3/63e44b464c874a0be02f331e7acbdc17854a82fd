@@ -1,0 +1,12 @@
+
+M
+java:S1854"7Remove this useless assignment to local variable "arr".(òÀÃ×
+>
+java:S1481"(Remove this unused "arr" local variable.(òÀÃ×
+]	java:S125*"<This block of commented-out lines of code should be removed.(ÛëÖşÿÿÿÿ8£ƒÓ¦†0
+F
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+Y
+java:S1128"<Remove this unused import 'javax.servlet.RequestDispatcher'.(Ëöò¼8¥ƒÓ¦†0
+Y
+java:S1128"CRemove this unused import 'javax.servlet.http.HttpServletResponse'.(Á¨ïë

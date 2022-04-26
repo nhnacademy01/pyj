@@ -39,7 +39,7 @@ public class CartServlet extends HttpServlet {
 
         out.println("-- buylist --");
         for (BuyList.Item item : buyList.getItems()) {
-            out.println(item);
+            out.println(item.toString());
         }
     }
 }
