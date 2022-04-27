@@ -1,0 +1,16 @@
+
+†
+java:S1319c"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ç£¸Ô
+W
+java:S4973Q"<Strings and Boxed types should be compared using "equals()".(—–£úÿÿÿÿ
+`
+java:S1854)"CRemove this useless assignment to local variable "checkKeepBuying".(Ÿ°ÝÖ8ÅŸåˆ†0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(°Òç±üÿÿÿÿ8ÕŸåˆ†0
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(†Â­Öûÿÿÿÿ8ÕŸåˆ†0
+U	java:S106'"9Replace this use of System.out or System.err by a logger.(¤ï·Ã8ÕŸåˆ†0
+U	java:S106-"9Replace this use of System.out or System.err by a logger.(ñœëß8ÕŸåˆ†0
+Z	java:S1060"9Replace this use of System.out or System.err by a logger.(ž°Åøÿÿÿÿ8ÕŸåˆ†0
+G
+java:S23906"%Remove this reference to "FoodStand".(³º¬³ûÿÿÿÿ8œÇ¬Š†0
+Z	java:S106W"9Replace this use of System.out or System.err by a logger.(³€’—øÿÿÿÿ8åŸåˆ†0
+Z	java:S106["9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ8åŸåˆ†0

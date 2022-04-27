@@ -1,0 +1,19 @@
+
+a
+java:S1192""FDefine a constant instead of duplicating this literal "apple" 3 times.(‹™ƒ„ıÿÿÿÿ
+a
+java:S1192"KDefine a constant instead of duplicating this literal "welshOnion" 3 times.(’Ç“‡
+a
+java:S1192"FDefine a constant instead of duplicating this literal "onion" 3 times.(’»•¿şÿÿÿÿ
+f
+java:S1989"PHandle the following exception that could be thrown by "getWriter": IOException.(¾šçŞ
+t
+java:S1989"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(’»•¿şÿÿÿÿ
+o
+java:S1989"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(şÙªû
+o
+java:S1989"YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(’Ç“‡
+t
+java:S1989""YHandle the following exception that could be thrown by "parseInt": NumberFormatException.(‹™ƒ„ıÿÿÿÿ
+n
+java:S1989%"SHandle the following exception that could be thrown by "sendRedirect": IOException.(¨ú®úÿÿÿÿ

@@ -1,0 +1,19 @@
+
+W
+java:S1854":Remove this useless assignment to local variable "cookie".(Óú’ó8¥Ï£†0
+H
+java:S1481"+Remove this unused "cookie" local variable.(Óú’ó8ı·×†0
+†
+java:S1989!"dHandle the following exceptions that could be thrown by "readCookie": ServletException, IOException.(çö‘ùÿÿÿÿ8è¹ˆ†0
+‚
+java:S1989#"eHandle the following exceptions that could be thrown by "writeCookie": ServletException, IOException.(…Âª±8…Ù‰†0
+€
+java:S1989%"^Handle the following exceptions that could be thrown by "show": ServletException, IOException.(±Ñşˆıÿÿÿÿ8Æ‡†0
+“
+java:S1130*"wRemove the declaration of thrown exception 'javax.servlet.ServletException', as it cannot be thrown from method's body.(ıù±8˜İ‡†0
+G
+java:S1172)"*Remove this unused method parameter "req".(º™™™8Ê‡†0
+“
+java:S1130W"wRemove the declaration of thrown exception 'javax.servlet.ServletException', as it cannot be thrown from method's body.(ıù±8¬¯Ø†0
+^
+java:S1075_"ARefactor your code to get this URI from a customizable parameter.(˜§÷æ8¶¯Ø†0

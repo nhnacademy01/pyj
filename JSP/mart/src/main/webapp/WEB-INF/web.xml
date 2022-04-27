@@ -5,24 +5,24 @@
          version="4.0">
 
 
-    <context-param>
-        <param-name>onion</param-name>
-        <param-value>1000</param-value>
-        <!-- 이런 방법도 있다 -->
-        <!-- <param-value>2;1000</param-value> -->
-    </context-param>
-    <context-param>
-        <param-name>egg</param-name>
-        <param-value>2000</param-value>
-    </context-param>
-    <context-param>
-        <param-name>welshOnion</param-name>
-        <param-value>500</param-value>
-    </context-param>
-    <context-param>
-        <param-name>apple</param-name>
-        <param-value>2000</param-value>
-    </context-param>
+<!--    <context-param>-->
+<!--        <param-name>onion</param-name>-->
+<!--        <param-value>1000</param-value>-->
+<!--        &lt;!&ndash; 이런 방법도 있다 &ndash;&gt;-->
+<!--        &lt;!&ndash; <param-value>2;1000</param-value> &ndash;&gt;-->
+<!--    </context-param>-->
+<!--    <context-param>-->
+<!--        <param-name>egg</param-name>-->
+<!--        <param-value>2000</param-value>-->
+<!--    </context-param>-->
+<!--    <context-param>-->
+<!--        <param-name>welshOnion</param-name>-->
+<!--        <param-value>500</param-value>-->
+<!--    </context-param>-->
+<!--    <context-param>-->
+<!--        <param-name>apple</param-name>-->
+<!--        <param-value>2000</param-value>-->
+<!--    </context-param>-->
 
 
     <welcome-file-list>
@@ -30,35 +30,36 @@
     </welcome-file-list>
 
 
-    <servlet>
-        <servlet-name>initServlet</servlet-name>
-        <servlet-class>com.nhnacademy.servlet.InitServlet</servlet-class>
-    </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>initServlet</servlet-name>
-        <url-pattern>/init</url-pattern>
-    </servlet-mapping>
+<!--    <servlet>-->
+<!--        <servlet-name>initServlet</servlet-name>-->
+<!--        <servlet-class>com.nhnacademy.servlet.InitServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    -->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>initServlet</servlet-name>-->
+<!--        <url-pattern>/init</url-pattern>-->
+<!--    </servlet-mapping>-->
 
-    <servlet>
-        <servlet-name>foodServlet</servlet-name>
-        <servlet-class>com.nhnacademy.servlet.FoodServlet</servlet-class>
-    </servlet>
+<!--    <servlet>-->
+<!--        <servlet-name>foodServlet</servlet-name>-->
+<!--        <servlet-class>com.nhnacademy.servlet.FoodServlet</servlet-class>-->
+<!--    </servlet>-->
 
-    <servlet-mapping>
-        <servlet-name>foodServlet</servlet-name>
-        <url-pattern>/foods</url-pattern>
-    </servlet-mapping>
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>foodServlet</servlet-name>-->
+<!--        <url-pattern>/foods</url-pattern>-->
+<!--    </servlet-mapping>-->
 
-    <servlet>
-        <servlet-name>cartServlet</servlet-name>
-        <servlet-class>com.nhnacademy.servlet.CartServlet</servlet-class>
-    </servlet>
 
-    <servlet-mapping>
-        <servlet-name>cartServlet</servlet-name>
-        <url-pattern>/cart</url-pattern>
-    </servlet-mapping>
+<!--    <servlet>-->
+<!--        <servlet-name>cartServlet</servlet-name>-->
+<!--        <servlet-class>com.nhnacademy.servlet.CartServlet</servlet-class>-->
+<!--    </servlet>-->
+
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>cartServlet</servlet-name>-->
+<!--        <url-pattern>/cart</url-pattern>-->
+<!--    </servlet-mapping>-->
     
     <error-page>
         <error-code>500</error-code>
